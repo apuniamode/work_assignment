@@ -1,0 +1,38 @@
+db.createCollection( "user_details", {
+   validator: { $jsonSchema: {
+      bsonType: "object",
+      required: [ "age","gender","weight","BMI" ],
+      properties: {
+         age: {
+            maxLength: 3,
+            description: "User age"
+         },
+         Gender: {
+            bsonType : "string",
+            description: "User Gender 'Female/Male'"
+         },
+         weight: {
+            maxLength: 3,
+            description: "User Weight"
+         },
+		 BMI :{
+			bsonType : "double",
+			description : "User BMI Count"
+		 },
+		 height:{
+			bsonType : "int",
+		 },
+		 habits:{
+			bsonType : "object",
+			properties:{
+				"smoking":{bsonType : "string"},
+				"Driking":{bsonType : "string"},
+				"Workout":{bsonType : "string"}
+			}
+		 },
+		 goals:{
+			bsonType : "string",
+		 },
+      }
+   } }
+} )
