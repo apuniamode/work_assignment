@@ -1,0 +1,23 @@
+db.createCollection( "airtical_details", {
+   validator: { $jsonSchema: {
+      bsonType: "object",
+      required: [ "artical","age_group","category"],
+      properties: {
+		artical:{
+			bsonType : "object",
+			properties :{
+				"title":{bsonType:"string"},
+				"content":{bsonType:"string"}
+			}
+		},
+		age_group:{
+			enum : ["A","B","C","D","E"],
+			description : "A='0-10',B='11-20',C='21-40',D='40-59',E='>60'"
+		},
+		category:{
+			bsonType : "string",
+			description : "Catagory of artical"
+		}
+      }
+   } }
+} )
