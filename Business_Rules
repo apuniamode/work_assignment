@@ -1,0 +1,44 @@
+1.Our Product Age Group : 20-70
+
+%%%%%%%%%%%%%%%%%%%%%%
+if age between 20-30 (Age Group A)
+	nutrition,fitness,cardic  
+if age between 30-40 (Age Group B)
+	nutrition,fitness,diabit,cardic
+if age between 40-50 (Age Group C)
+	nutrition,fitness,diabit,cardic
+if age between 50-60 (Age Group D)
+	fitness,diabit,cardic
+if age between 60-70 (Age Group E)
+	fitness,diabit,cardic , nutrition
+%%%%%%%%%%%%%%%%%%%%%%
+if BMI <=18 (BMI Group A)
+	nutrition ,sleep
+if BMI >18 and <=25 (BMI Group B)
+	fitness,sleep
+if BMI >25 and <=28 (BMI Group C)
+	diabit,cardic,fitness
+	
+%%%%%%%%%%%%%%%%%%%%%%
+1. IF age is A and BMI is A : N,S
+2. IF age is A and BMI is B : F,S 
+3. IF age is A and BMI is C : C,F
+4. IF age is B and BMI is A : N,S
+5. IF age is B and BMI is B : F,S
+6. IF age is B and BMI is C : D,C
+7. IF age is C and BMI is A : N,S
+8. IF age is C and BMI is B : F,S
+9. IF age is C and BMI is C : D,C,F
+10.IF age is D and BMI is A : D,C
+11.IF age is D and BMI is B : F,S
+12.IF age is D and BMI is C : C,D,F
+13.IF age is E and BMI is A : C,D
+14.IF age is E and BMI is B : F,S
+15.IF age is E and BMI is C : C,D,F
+%%%%%%%%%%%%%%%%%%%%%%
+
+N = Nutrition
+S = Sleep
+D = Diabetes
+C = Cardiac Health
+F = Fitness
